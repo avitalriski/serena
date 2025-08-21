@@ -33,6 +33,7 @@ class Language(str, Enum):
     RUST = "rust"
     JAVA = "java"
     KOTLIN = "kotlin"
+    SCALA = "scala"
     TYPESCRIPT = "typescript"
     GO = "go"
     RUBY = "ruby"
@@ -95,6 +96,8 @@ class Language(str, Enum):
                 return FilenameMatcher("*.cpp", "*.h", "*.hpp", "*.c", "*.hxx", "*.cc", "*.cxx")
             case self.KOTLIN:
                 return FilenameMatcher("*.kt", "*.kts")
+            case self.SCALA:
+                return FilenameMatcher("*.scala", "*.sbt", "*.sc")
             case self.DART:
                 return FilenameMatcher("*.dart")
             case self.PHP:

@@ -162,6 +162,13 @@ class SolidLanguageServer(ABC):
 
             ls = KotlinLanguageServer(config, logger, repository_root_path, solidlsp_settings=solidlsp_settings)
 
+        elif config.code_language == Language.SCALA:
+            from solidlsp.language_servers.metals_server import (
+                MetalsLanguageServer,
+            )
+
+            ls = MetalsLanguageServer(config, logger, repository_root_path, solidlsp_settings=solidlsp_settings)
+
         elif config.code_language == Language.RUST:
             from solidlsp.language_servers.rust_analyzer import (
                 RustAnalyzer,

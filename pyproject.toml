@@ -255,6 +255,7 @@ markers = [
   "go: language server running for Go",
   "java: language server running for Java",
   "rust: language server running for Rust",
+  "scala: language server running for Scala",
   "typescript: language server running for TypeScript",
   "php: language server running for PHP",
   "csharp: language server running for C#",
